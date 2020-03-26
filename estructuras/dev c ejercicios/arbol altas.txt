@@ -1,0 +1,102 @@
+#include <iostream>
+#include <stdlib.h>
+int	raiz=0,tamVector=5,vacio=0,opcion=1;
+int	contador=0,elemento,aqui=0;
+struct nodo {
+int dato; 
+int der;
+int izq;
+} arbol[5];
+void leeopcion()
+{
+	printf(" Opcion-> ");
+	scanf("%d",&opcion);
+}
+void inicializa(){
+	
+raiz=0;
+contador=0;
+	for(int i=0;i<tamVector;i++){
+		arbol[i].dato=0;
+		arbol[i].izq=0;
+		arbol[i].der=0;
+	}
+
+}
+void buscaLugar()
+{
+	
+	while(arbol[raiz].izq!=0 || arbol[raiz].der!=0)
+	{
+	if(elemento>arbol[raiz].dato){
+		aqui=raiz;
+		raiz=arbol[raiz].der;
+	}
+	else{
+		aqui=raiz;
+			raiz=arbol[raiz].izq;
+	}
+	}
+		if(arbol[raiz].izq!=0 && arbol[raiz].der!=0){
+		aqui=raiz;
+			}
+}
+void altas()
+{
+if(contador<tamVector)
+	{
+	
+	//	buscavacio();
+		printf("Introduce el nuevo datos: \n");
+		scanf("%d",&elemento);
+		arbol[vacio].dato=elemento;
+		if (contador==0 ) 
+		{
+		buscaLugar();//lugar entre j y p
+			if (elemento>arbol[aqui].dato) {
+			arbol[aqui].der=vacio;
+			}
+			else
+			{
+				arbol[aqui].izq=vacio;
+			}
+		
+		}
+		else
+		{
+			
+				raiz=vacio;
+			arbol[0].dato=raiz;
+		}
+	//	contador++;
+}
+	else
+	{
+		printf("memoria llena\n");
+	}
+	}
+
+	void menu()
+{
+	printf("MENU \n");
+	printf("1. Adicionar elemento \n");
+//	printf("2. Eliminar Elemento \n");
+//	printf("3. Modificar Elemento \n");	
+//	printf("4. Mostrar Almacenamiento \n");
+//	printf("5. Mostrar Lista \n");
+	printf("0. Salir \n");
+}	
+	int main() {
+	    inicializa();
+		menu();
+		do{
+			leeopcion();
+			switch(opcion)
+			{
+				case 1: altas();break;
+				//case 2: verArbol(arbol, 0);break;
+					}
+		}while (opcion !=0);
+		printf("Hasta LUego");
+	return 0;
+}

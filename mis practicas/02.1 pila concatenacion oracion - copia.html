@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script text="javascript">
+     class Queue {
+            constructor() {
+                this.queue = [];
+            }
+
+            enqueue(element) {
+                this.queue.push(element);
+                return this.queue;
+            }
+
+            dequeue() {
+                return this.queue.shift();
+            }
+
+            peek() {
+                return this.queue[0];
+            }
+
+            size() {
+                return this.queue.length;
+            }
+
+            isEmpty() {
+                return this.queue.length === 0;
+            }
+
+            print() {
+                return this.queue;
+            }
+            }
+
+            const queue = new Queue();
+           /* var palabra;
+            var caracter;
+            var c="";
+            var conca="";
+            var ii=0;
+            var u=0;
+            var es;
+            var a =0;
+            */
+            palabra=window.prompt("Ingrese el dato");
+            document.write("La palabra ingresada es: ");
+            document.write(palabra);
+/*
+            for (var i =0;i< palabra.length;i++) { //avanzar entre caracteres y buscar el espacio
+                es=palabra.substr(i,1);
+                if (es==" ") {
+                    ii=i;
+                    document.write("    el espacio esta en la posicion "+ii);
+                  // for (var n = u ; n<ii; n++) {
+                  //     caracter=palabra.substr(u,ii);
+                      // conca=conca+caracter;
+                      caracter=palabra.substr(u,ii);
+                  //  u=u+i;
+                 //   a=a+1;
+                      
+                 // }
+                  u=u+ii+1;
+                  ii=0;
+                }*/
+ 
+ //var cadena = "cadena de texto",
+    separador = " ", // un espacio en blanco
+    limite    = 4,
+    arregloDeSubCadenas = palabra.split(separador, limite);
+ console.log(queue.size());
+                queue.print();
+                console.log(queue.enqueue(arregloDeSubCadenas));
+               //conca=conca.concat(c);
+               // c=caracter;
+                
+                //conca=conca+caracter;
+              
+             //   console.log(stack.push(caracter));
+               
+                ///////////////////////////////////////////////
+           console.log(arregloDeSubCadenas);
+           // }
+//document.write(" palabra1 "+u);
+    </script>
+</body>
+</html>

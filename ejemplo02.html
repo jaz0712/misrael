@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script text="javascript">
+        class pila {
+            constructor() {
+                this.stack = [];
+            }
+            
+            insertar(element) {
+                this.stack.push(element);
+                return this.stack;
+            }
+            
+            extraer() {
+                return this.stack.pop();
+            }
+            
+            actual() {
+                return this.stack[this.stack.length - 1];
+            }
+            
+            longitud() {
+                return this.stack.length;
+            }
+
+            mostrar() {
+                console.log(this.stack);
+            }
+        }
+
+
+        // uso de la estructura implementada
+            const cajas = new pila();
+            console.log(cajas.longitud()); // 0
+            console.log(cajas.insertar('Felipe')); 
+            console.log(cajas.insertar('Kebel')); 
+            console.log(cajas.insertar('Franz')); 
+            console.log(cajas.insertar('Carla')); 
+            console.log(cajas.insertar('Lucero')); 
+            console.log(cajas.longitud()); 
+            cajas.mostrar(); 
+            console.log(cajas.actual());
+            console.log(cajas.extraer());
+            cajas.mostrar();  
+            console.log(cajas.actual());
+    </script>
+</body>
+</html>

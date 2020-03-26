@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script text="javascript">
+     class Queue {
+            constructor() {
+                this.queue = [];
+            }
+
+            enqueue(element) {
+                this.queue.push(element);
+                return this.queue;
+            }
+
+            dequeue() {
+                return this.queue.shift();
+            }
+
+            peek() {
+                return this.queue[0];
+            }
+
+            size() {
+                return this.queue.length;
+            }
+
+            isEmpty() {
+                return this.queue.length === 0;
+            }
+
+            print() {
+                return this.queue;
+            }
+            }
+
+            const queue = new Queue();
+          
+            palabra=window.prompt("Ingrese el dato");
+            document.write("La palabra ingresada es: ");
+            document.write(palabra);
+
+    separador = " ", // un espacio en blanco
+    limite    = palabra.length,
+    arregloDeSubCadenas = palabra.split(separador, limite);
+ console.log(queue.size());
+                queue.print();
+                console.log(queue.enqueue(arregloDeSubCadenas));
+              console.log(queue.size()); 
+               
+                ///////////////////////////////////////////////
+           console.log(arregloDeSubCadenas);
+   
+    </script>
+</body>
+</html>

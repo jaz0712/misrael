@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script text="javascript">
+        class Stack {
+            constructor() {
+                this.stack = [];
+            }
+            
+            push(element) {
+                this.stack.push(element);
+                return this.stack;
+            }
+            pop(){
+                return this.stack.pop();
+            }
+            
+            peek() {
+                return this.stack[this.stack.length - 1];
+            }
+            
+            size() {
+                return this.stack.length;
+            }
+
+            print() {
+                console.log(this.stack);
+            }
+        }
+
+            const stack = new Stack();
+            var palabra;
+            var caracter;
+            var c="";
+            var conca="";
+            palabra=window.prompt("Ingrese el dato");
+            document.write("La palabra ingresada es: ");
+            document.write(palabra);
+            for (var i =0;i< palabra.length;i++) {
+                caracter=palabra.substr(i,1);
+               //conca=conca.concat(c);
+               // c=caracter;
+                conca=conca+caracter;
+               
+             //   console.log(stack.push(caracter));
+                console.log(stack.size());
+                stack.print();
+                console.log(stack.push(conca));
+                ///////////////////////////////////////////////
+      
+            }
+
+    </script>
+</body>
+</html>

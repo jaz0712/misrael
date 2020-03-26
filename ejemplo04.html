@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script text="javascript">
+        class cola {
+            constructor() {
+                this.queue = [];
+            }
+
+            insertat(element) {
+                this.queue.push(element);
+                return this.queue;
+            }
+
+            extraer() {
+                return this.queue.shift();
+            }
+
+            actual() {
+                return this.queue[0];
+            }
+
+            largo() {
+                return this.queue.length;
+            }
+
+            vacio() {
+                return this.queue.length === 0;
+            }
+
+            mostrar() {
+                return this.queue;
+            }
+            }
+
+            const fila = new cola();
+            console.log(fila.insertat('Kebel'));
+            console.log(fila.insertat('Lucero'));
+            console.log(fila.insertat('Carla'));
+            console.log(fila.insertat('Franz'));
+            console.log(fila.insertat('Sebastian'));
+            console.log(fila.insertat('JAvier'));
+            console.log(fila.insertat('Juan'));
+            console.log(fila.insertat('Luis'));
+            console.log(fila.extraer()); 
+            console.log(fila.actual()); 
+            console.log(fila.vacio());
+            console.log(fila.mostrar()); 
+    </script>
+</body>
+</html>

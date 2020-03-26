@@ -1,0 +1,12 @@
+una universidad desea tener una bd de datos de un estudiante
+las materias q cursa y la carrera q estudia y docentes la materia que imparte cada docente
+de igual materia se desea llevar un registro de las materias 
+que imparte cada docente
+cms:
+juna
+grupa
+
+sinphony llamada de funciones p.oj.
+
+
+

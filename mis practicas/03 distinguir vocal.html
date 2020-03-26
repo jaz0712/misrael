@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script text="javascript">
+     class Queue {
+            constructor() {
+                this.queue = [];
+            }
+
+            enqueue(element) {
+                this.queue.push(element);
+                return this.queue;
+            }
+
+            dequeue() {
+                return this.queue.shift();
+            }
+
+            peek() {
+                return this.queue[0];
+            }
+
+            size() {
+                return this.queue.length;
+            }
+
+            isEmpty() {
+                return this.queue.length === 0;
+            }
+
+            print() {
+                return this.queue;
+            }
+            }
+
+            const queue = new Queue();
+    
+            palabra=window.prompt("Ingrese el dato");
+            document.write("La palabra ingresada es: ");
+            document.write(palabra);
+
+             
+          var numeroVocales = palabra.match(/[aeiou]/gi).length; ////vocales
+          console.log(numeroVocales);
+           console.log(queue.enqueue(numeroVocales));
+          var numeroConsonantes = palabra.match(/[bcdfghjkmnpqrstvwxyzñ]/gi).length; ///consonantes
+          console.log(numeroConsonantes);
+           console.log(queue.enqueue(numeroConsonantes));
+          var numeroEspacios = palabra.match(/[ ]/gi).length; //espacio
+            console.log(numeroEspacios);
+         console.log(queue.enqueue(numeroEspacios));
+          var numeroSignos = palabra.match(/[-.,;:_¨^*]/gi).length;//signos de puntuacion
+          console.log(numeroSignos);
+           console.log(queue.enqueue(numeroSignos));
+              console.log(queue.size());
+                queue.print();
+    </script>
+</body>
+</html>

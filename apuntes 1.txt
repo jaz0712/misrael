@@ -1,0 +1,39 @@
+Cap1
+Nociones Basicas
+La TEORIA DE LENG FORMALES estudia unas ENTIDADES MATEMATICAS ABSTRACTAS 
+denominadas LENGUAJES
+- No confundir con los leng Naturales
+- ES UN CONJ FINITO O INFINITO DE CADENAS DEFINIDAS SOBRE UN ALFABETO FINITO
+-atencion a sus PROPIEDADES ESTRUCTURALES
+ALFABETO: CONJ FINITO DE SIMBOLOS
+SIMBOLO: Primitivo de la teoria de los leng formales
+- representarlos con bien las primeras LETRAS DEL ALFABETO o bien DIGITOS
+		a,b,c   o  0,1
+CADENA o palabra:SERIE ARBITRAREAMENTE LARGA DE SIMBOLOS UNIDOS por CONCATENA
+CION
+-Representados con los simbolos en el orden deseado ej aaabbbccc
+- es recursiva
+-cadena vacia Epsilon e.
+	-es el elemento de identidad de la operacion de concatenación
+- concatenación de cadenas no es conmutativa (pero sí asociativa)
+LENGUAJE: CONJ FINITO o INFINITO de cadenas
+En el universo hay infinitos leng. no todos son interesantes, 2 puntos nos 
+permite elegir
+-1. siguen alguna pauta regular en la construccion de las cadenas.l3 si
+		ej. l3=abc,aabbccc,aaabbbccc l4=a,cab,bdac
+-2 con un disp mecanico capaz de determinar si una cadena petenece a un leng
+determinado, eso es PROCEDIMIENTO DE SELECCION.
+-Estos dos puntos definen los obj de dos disciplinas matematicas ocupadas de
+poner orden en el universo de los leng formales: TEORIA DE LENG FORMALES Y LA
+TEORIA DE LA COMPLEJIDAD COMPUTACIONAL
+-TEORIA DE COMPLEJIDAD COMPTACIONAL atencion a los RECURSOS que utilizaria 
+DISPOSITIVO MECANICO para completar un PROCEDIMIENTO DE DECISION,def asi 
+diferentes clases de complejidad computacional y las relaciones entre ellas 
+CONSTUCTOR DE CONJ. FORMULA  que permite derivar cualquier cadena del leng
+mediante el constructor
+CAP2
+50s hasta inicios 70s, con NOAM CHOMSKY->estructura del espacio de lenguajes 
+formales definido por la galaxia G. 
+CAP3 LENGUAJES REGULARES
+LENG REGULARES -Leng mas simples dentro de la jerarquia Chomsky
+JERARQUI SUBREGULAR: leng mas simples que los descritos por chomsky

@@ -1,0 +1,7 @@
+C:\Users\jasma\Desktop\matriz incidencia 1\matriz incidencia 1\bin\Debug\matriz incidencia 1.exe.config
+C:\Users\jasma\Desktop\matriz incidencia 1\matriz incidencia 1\bin\Debug\matriz incidencia 1.exe
+C:\Users\jasma\Desktop\matriz incidencia 1\matriz incidencia 1\bin\Debug\matriz incidencia 1.pdb
+C:\Users\jasma\Desktop\matriz incidencia 1\matriz incidencia 1\obj\Debug\matriz_incidencia_1.Properties.Resources.resources
+C:\Users\jasma\Desktop\matriz incidencia 1\matriz incidencia 1\obj\Debug\matriz incidencia 1.csproj.GenerateResource.Cache
+C:\Users\jasma\Desktop\matriz incidencia 1\matriz incidencia 1\obj\Debug\matriz incidencia 1.exe
+C:\Users\jasma\Desktop\matriz incidencia 1\matriz incidencia 1\obj\Debug\matriz incidencia 1.pdb

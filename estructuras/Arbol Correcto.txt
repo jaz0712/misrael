@@ -1,0 +1,232 @@
+#include <iostream>
+#include <stdlib.h>
+int	raiz=0,tamVector=10,vacio=0,opcion=1,ant;
+int	contador=0,elemento,aqui=0,vizq,vder,remp,antremp,p;
+struct nodo {
+int dato; 
+int der;
+int izq;
+} arbol[10];
+void leeopcion()
+{
+	printf(" Opcion-> ");
+	scanf("%d",&opcion);
+}
+void inicializa(){
+	raiz=0;
+	contador=0;
+	for(int i=0;i<tamVector;i++){
+		arbol[i].dato=0;
+		arbol[i].izq=0;
+		arbol[i].der=0;
+	}
+
+}
+void buscavacio()
+{
+	vacio=1;
+	while (arbol[vacio].dato!=0){
+		vacio++;
+	}
+}
+
+void buscaLugar()
+{
+	//printf("Busca inicio aqui=%d   raiz=%d \n",aqui,raiz);
+	int p=raiz;
+	aqui=raiz;
+	while(p!=0)
+	{
+		aqui=p;
+		if(elemento>arbol[p].dato)
+		{
+			p=arbol[p].der;
+		}
+		else{
+			p=arbol[p].izq;
+		}
+		
+	//	printf("Buscando aqui=%d   raiz=%d \n",aqui,raiz);
+	}
+		
+	//	printf("Buscando ultima =%d   raiz=%d \n",aqui,raiz);
+}
+void altas()
+{
+if(contador<tamVector)
+	{
+	
+		buscavacio();
+		printf("Introduce el nuevo datos: \n");
+		scanf("%d",&elemento);
+		arbol[vacio].dato=elemento;
+		if (contador==0 )
+		{
+			
+				raiz=vacio;
+			arbol[0].dato=raiz;
+		}
+ 		else
+		{
+			
+			buscaLugar();//lugar  aqui
+			
+			if (elemento>arbol[aqui].dato) {
+			arbol[aqui].der=vacio;
+			}
+			else
+			{
+				arbol[aqui].izq=vacio;
+			}
+			
+		}
+	
+	 	contador++;
+	}
+	else
+	{
+		printf("memoria llena\n");
+	}
+}
+void izder()
+{
+	remp=aqui;
+	antremp=aqui;
+	p=arbol[aqui].izq;
+	printf("Antes del while a la izq--> anteremp=%d   remp=%d  p=%d\n",antremp,remp,p);
+
+	while(p!=0)
+	{
+		antremp=remp;
+		remp=p;
+		p=arbol[p].der;
+		printf("while a la derecha--> anteremp=%d   remp=%d  p=%d\n",antremp,remp,p);
+	}
+}
+void sacar()
+{
+	//printf("Sacar--> aqui=%d   p=%d \n",aqui,p);
+
+	if (arbol[aqui].izq==0 )
+	{
+		if (aqui==raiz)
+		{ 
+			remp=raiz;
+			raiz=arbol[aqui].der;
+			arbol[0].dato=raiz;
+		}
+		else
+		{
+			arbol[ant].der=arbol[aqui].der;
+			remp=aqui;
+		}
+	}
+	else	
+	{izder();
+	
+	//printf("Despeues izq--> anteremp=%d   remp=%d  aqui=%d\n",antremp,remp,aqui);
+		if (arbol[aqui].izq==remp && arbol[remp].der==0)
+		{
+			arbol[aqui].izq=arbol[remp].izq;
+			antremp=0;
+			//remp=0;
+		}
+	//printf("Despues del primer if izq--> anteremp=%d   remp=%d  aqui=%d\n",antremp,remp,aqui);
+		if(aqui==remp)
+		{
+			arbol[ant].der=arbol[aqui].der;
+			antremp=0;
+			remp=aqui;
+		}
+	//printf("Despeues del segundo if izq--> anteremp=%d   remp=%d  aqui=%d\n",antremp,remp,aqui);
+		arbol[antremp].der=arbol[remp].izq;
+		arbol[aqui].dato=arbol[remp].dato;
+	}
+	arbol[remp].dato=0;
+	arbol[remp].der=0;
+	arbol[remp].izq=0;
+}
+void Busca()
+{
+	p=raiz;
+	aqui=raiz;
+	ant=raiz;
+	while (p!=0 && arbol[p].dato!=elemento)
+	{
+		ant=aqui;
+		aqui=p;
+		
+		if (elemento>arbol[p].dato)
+		{
+			p=arbol[p].der;
+		}
+		else
+		{
+			p=arbol[p].izq;
+		}
+	}
+	if (elemento==arbol[p].dato)
+		{
+			ant=aqui;
+			aqui=p;
+		}
+	
+}
+void bajas()
+{
+	Busca();
+	if (elemento==arbol[aqui].dato)
+	{
+		sacar();
+	}
+	else
+	{
+		printf("Elemento no encontrado\n");
+	}
+}
+	void mvec()
+	{
+		printf("<<<<<< ALMACENAMIENTO >>>>>>\n");
+		for (int i=0;i<tamVector;i++){
+				printf(" Almacenamiento[%d]::   [%d]<--Hijo Izq   Arbol[%d].dato=|%d|   Hijo Derecho-->[%d]\n",i,arbol[i].izq,i,arbol[i].dato,arbol[i].der);	
+		}
+	
+	}
+	void menu()
+{
+	printf("MENU \n");
+	printf("1. Adicionar elemento \n");
+	printf("2. Eliminar Elemento \n");
+//	printf("3. Modificar Elemento \n");	
+//	printf("4. Mostrar Almacenamiento \n");
+	printf("5. Mostrar Lista \n");
+	printf("0. Salir \n");
+}	
+int leer(int opp)
+{ int elem;
+		switch(opp)
+		{
+			case 1: printf("Introducir el nuevo elemento"); break;
+			case 2: printf("Introducir el elemento a eliminar"); break;
+			case 3: printf("Introducir el elemento a modificar"); break;
+			
+		}
+		scanf("%d",&elem);
+		return elem;
+}
+	int main() {
+	    inicializa();
+		menu();
+		do{
+			leeopcion();
+			switch(opcion)
+			{
+				case 1: altas();break;
+				case 2: elemento=leer(2); bajas();break;
+				case 3: elemento=leer(3); bajas();altas(); break;				
+				case 5: mvec();break;
+					}
+		}while (opcion !=0);
+		printf("Hasta LUego");
+	return 0;
+}

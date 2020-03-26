@@ -1,0 +1,24 @@
+lenguaje:conj de simbolos
+operadores:union,concatencacion
+UNION:conj de elementos sin orden especifico
+      agrpacion de 2 conj en uno, sin orden
+CONCATENACION:SI orden, no conmutativa
+	p=aef
+	b=ada			p+q!=q+p
+DEPENDENCIA LINEAL: es cuando existe un "camino" que nos lleva de un estado q1 a
+un estado q2
+si tengo un estado 1 y quiero pasar al 2, debo tener un camino
+definido para pasar de estado, de manera secuencial y ordenada,NO es INVERSO, no 
+obligatoriamente de vuelta
+q1->q2
+FUNCION DE TRANCISION: aquella funcion o cinj de acciones o comandos q nos permite
+viajar de un estado q a un estado 2
+son palabras o cadenas(definidas por el leng) q nos permiten viajar de un estado a otro, segun la 
+definicion
+ESTADO: es una estructura de datos propia de los automatas, son nodos
+ELEMENTOS DENTRO DE UN ESTADO: contenido,posicion, origen, destino
+AUTOMATA DE ESTADOS FINITOS: conj de estructuras denominadas nodos q representan un 
+estado actual del automata q podemos ir recorriendo mediante funciones de 
+transicion
+CLASE:es una especie de plantilla o molde dentro el programa donde podemos instanciar
+diferentes objetos, ya con nombre propio pero van a adoptar ESTRUCTURA de la clase

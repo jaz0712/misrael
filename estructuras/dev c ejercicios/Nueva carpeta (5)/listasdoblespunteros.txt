@@ -1,0 +1,11 @@
+direccion del url
+.......................................................................
+https://es.ccm.net/faq/2872-listas-doblemente-enlazadas#ejemplo-completo
+.......................................
+****Cómo se construye el modelo de un elemento de la lista****
+typedef struct dl_ElementoLista {
+char *dato;
+struct dl_ElementoLista *anterior;
+struct dl_ElementoLista *siguiente;
+}dl_Elemento;
+..........................................

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+            <meta content="width=device-width, initial-scale=1.0" name="viewport">
+                <title>
+                    Document
+                </title>
+            </meta>
+        </meta>
+    </head>
+    <body>
+        <script text="javascript">
+            class Stack {
+            constructor() {
+                this.stack = [];
+            }
+            
+            push(element) {
+                this.stack.push(element);
+                return this.stack;
+            }
+            pop(){
+                return this.stack.pop();
+            }
+            
+            peek() {
+                return this.stack[this.stack.length - 1];
+            }
+            
+            size() {
+                return this.stack.length;
+            }
+
+            print() {
+                console.log(this.stack);
+            }
+        }
+
+                      const stack = new Stack();
+            var oracion="";
+            var palabra="";
+            var c="";
+            var conca="";
+            var espacio=0;
+            var es=""
+            var u=0;
+            oracion=window.prompt("Ingrese la oracion");
+            document.write("La oracion ingresada es: ");
+            document.write(oracion);
+            for (var i =0;i< oracion.length;i++) {
+               es=oracion.substr(i,1); 
+               if (es==" ") {
+                      espacio=espacio+1;
+            
+                 }
+                else {
+                        console.log(`contiene al menos un espacio`);
+                     while (oracion.=espacio){
+                      for (var n = u; n<i; n++) {
+                         palabra=oracion.substr(n,i); 
+                               u=u+1;
+                               c=palabra;
+                               conca=conca+palabra;
+                        }
+                            } 
+               //conca=conca.concat(c);
+                        
+                        }
+
+                
+             //   console.log(stack.push(palabra));
+                console.log(stack.size());
+                stack.print();
+                console.log(stack.push(conca));
+      //console.log(stack.push(espacio));
+    
+            }
+               document.write("   "+espacio);
+               document.write(" "+es);
+        </script>
+    </body>
+</html>

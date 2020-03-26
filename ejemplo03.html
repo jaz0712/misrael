@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script text="javascript">
+        class Queue {
+            constructor() {
+                this.queue = [];
+            }
+
+            enqueue(element) {
+                this.queue.push(element);
+                return this.queue;
+            }
+
+            dequeue() {
+                return this.queue.shift();
+            }
+
+            peek() {
+                return this.queue[0];
+            }
+
+            size() {
+                return this.queue.length;
+            }
+
+            isEmpty() {
+                return this.queue.length === 0;
+            }
+
+            print() {
+                return this.queue;
+            }
+            }
+
+            const queue = new Queue();
+            console.log(queue.enqueue('Kebel'));
+            console.log(queue.enqueue('Lucero'));
+            console.log(queue.enqueue('Carla'));
+            console.log(queue.dequeue()); 
+            console.log(queue.peek()); 
+            console.log(queue.isEmpty());
+            console.log(queue.print()); 
+    </script>
+</body>
+</html>

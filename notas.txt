@@ -1,0 +1,103 @@
+lenguaje conformado por 5 simbolos?
+ lenguaje de las vocales, conformado por aeiou
+con ellos cuantas palbras se pueden formar?
+cadenas infinitas porque son recursivas, se pueden reutilizar en la misma cadena
+CADENA VACIA?
+la cadena vacia es la identidad de la operacion de concatenacion, se representa por
+el simbolo de sumatoria
+-cadena vacia forma parte de todos los lenguajes?si, no?porque?
+es un elemento neutro para la concatenacion de elementos por lo cual si puede 
+formar parte de todos los leguajes
+porque se utiliza la letra T0 para definir los lenguajes?
+porque son de tipo 0 como dice son recursivamente pero enumerados
+porque a partir del t0 ya son complejos segun su jerarquia
+LENGUAJE RECURSIVO?
+Reutilizarse, repetirse a si mismos y esta conformada por cadenas concatenadas
+LA MISMA CADENA...eso es concatenacion, no union
+UNION es una operacion entre conjuntos donde el orden de los elementos NO importa
+CONCATENACION operacion entre conjuntos donde el orden SI importa 
+P1=aba y P2=abb, la preposicion p1=p2 se cumple o no?   NO, no son iguales
+Concatenar pq y p2 es igual que cooncatenar p2 con p1?p1+p2=p2+p1?
+no, porque una concatenacion no es conmutativa(si fuera conmutativa seria unio ya
+no concatenacion)
+Define un operador entre cadenas
+un 2 es un simbolo que es un operador
+-que es dependencia LINEAL de cadenas en un lenguaje
+es aquella con la cual se depende de una cadena
+cuando se depende algo puede ser de distintas formas en la cual no se puede actuar
+de la principal sea cual sea el caso
+-que es un automata de estados finitos?
+AEF es el modelo computacional asociado a sistemas regulares
+una unidad de control asociada a un cabezal de lectura, el cual esta conectado 
+a una cinta dividida en celdillas
+-que es una CELDILLA?
+una cinta esta dividido en celdillas que son como divisiones, en cada una hay
+ un simbolo de la cadena a analizar
+-que ELEMENTOS componen un automata de estados infinitos?
+es una quíntupla (Q, S, d, q0, F), tal que Q es un conjunto finito de estados,
+ S es un alfabeto de entrada, q0 ? Q es el estado inicial, F ? Q es el conjunto 
+de estados finales y d es la función de transición que proyecta Q × S en Q. 
+Es decir, d(q, a) es un estado para cada estado q y cada símbolo de entrada a
+-que es funcion de TRANSICION?
+Es el que permite determinar cual es el sig estado
+-ESTADOS OBLIGATORIOS de todo automata?
+inicial y final
+-cuantos estados puede tener? Nal momento de definirla
+
+
+
+
+
+
+
+
+Conceptos fundamentales
+DATO. Es una representación simbólica (numérica, alfabética, algorítmica, espacial,
+ etc.) de un atributo o variable cuantitativa o cualitativa. Los datos describen 
+hechos empíricos, sucesos y entidades. Es un valor o referente que recibe el 
+computador por diferentes medios, los datos representan la información que el
+ programador manipula en la construcción de una solución o en el desarrollo de 
+un algoritmo.
+INFORMACIÓN. Conjunto de datos procesados, ordenados, organizados y estructurados 
+que conforman un mensaje que cambia el estado de conocimiento del receptor.
+VARIABLE. Es un espacio de memoria asignado e identificado con un nombre para 
+lectura y escritura de datos, su espacio de almacenamiento depende del tipo de
+ dato asignado.
+TIPO DE DATO. Es un atributo de los datos que indica al ordenador sobre la clase
+ de datos que se va a manejar. Esto incluye imponer restricciones en los datos,
+ como qué valores pueden tomar y qué operaciones se pueden realizar.
+Los tipos de datos más comunes son: numéricos, cadenas alfanuméricas, fecha/hora, 
+estados, etc.
+
+ESTRUCTURA DE DATOS. Es una forma particular de organizar datos en una computadora 
+para que puedan ser utilizados de manera eficiente. Diferentes tipos de estructuras 
+de datos son adecuados para diferentes tipos de aplicaciones, y algunos son altamente
+ especializados para tareas específicas.
+Las estructuras de datos son un medio para manejar grandes cantidades de datos de 
+manera eficiente para usos tales como grandes bases de datos. Por lo general, las 
+estructuras de datos eficientes son clave para diseñar algoritmos eficientes
+
+
+clase viernes 20 de marzo de 2020
+ESTRUCTURA
+PILAS:ESTRUCTURA
+opera-> de forma LINEAL y UNIDIRECCIONAL(inicio a fin)
+funcion->permite trabajar desde operaciones que ya estan definidas
+opera con la modalidad->LIFO(last in first out)ultimo en entrar en el primero en salir
+aplicacion->en algoritmos de este tipo de estructura
+Metodos de PILA-> push,pop,peek,size,print
+PUSH-> AGREGA al final de la pila
+POP->RETORNA el ultimo
+PEEK->RETORNA SIN sacarlo de la pila, nos muestra el ultimo pero no lo saca
+SIZE->CANTIDAD de elementos
+PRINT->MUESTRA
+COLA:
+opera-> de forma LINEAL y UNIDIRECCIONAL
+opera con la modalidad->FIFO(first in first out)primero en entrar es el primero en salir
+ej->cola de personas
+Metodos de COLA->esqueue,dequeue,peek,size,print
+ESQUEUE->AGREGA al final
+DEQUEUE->RETORNA al primero quitandola de la cola
+PEEK->RETORNA el primero SIN quitarlo 
+SIZE
+PRINT

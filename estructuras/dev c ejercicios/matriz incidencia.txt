@@ -1,0 +1,29 @@
+void altas()
+{	
+	printf("Ingresa Columnas: ");
+	scanf("%d",&col);
+	printf("Ingresa Filas: ");
+	scanf("%d",&fil);
+
+
+	for(y = 0;y < fil;y++) // esto nos movera por las filas
+	{
+		for(x = 0;x < col;x++) // esto nos movera por las columnas
+		{	printf("entaaa: ");
+			printf("Valor [%d][%d] : ",y,x); // nos imprimira por que columna y fila (coordenada) estamos
+			scanf("%d",&matrix[y][x]); // se asigna el valor a la matrix
+		}
+	}
+	
+	
+	for(y = 0;y < fil;y++)
+	{
+		for(x = 0;x < col;x++)
+		{
+			printf("%d\t",&matrix[y][x]); // se imprime los resultados para la visualización previa
+		}
+	//	puts(\n);// salto de linea 
+	printf("%d","\n"); 
+	}	
+	
+}
