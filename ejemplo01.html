@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script text="javascript">
+        class Stack {
+            constructor() {
+                this.stack = [];
+            }
+            
+            push(element) {
+                this.stack.push(element);
+                return this.stack;
+            }
+            pop(){
+                return this.stack.pop();
+            }
+            
+            peek() {
+                return this.stack[this.stack.length - 1];
+            }
+            
+            size() {
+                return this.stack.length;
+            }
+
+            print() {
+                console.log(this.stack);
+            }
+        }
+
+            const stack = new Stack();
+            console.log(stack.size()); // 0
+            console.log(stack.push('Felipe')); 
+            console.log(stack.push('Kebel')); 
+            console.log(stack.push('Franz')); 
+            console.log(stack.size()); 
+            stack.print(); 
+            console.log(stack.peek());
+            console.log(stack.pop()); 
+            console.log(stack.peek());
+    </script>
+</body>
+</html>
